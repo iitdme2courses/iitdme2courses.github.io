@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👀 IIT Delhi Courses</title>
+    
+    <script>
+        // Function to change the title when the tab is not active
+        function handleVisibilityChange() {
+            document.title = document.hidden ? '💤 Inactive' : '👀 IIT Delhi Courses';
+        }
+
+        // Event listener for visibility change
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+        // Function to handle smooth scrolling
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Event listeners for navigation links
+        document.querySelector('nav a[href="#home"]').addEventListener('click', function () {
+            scrollToSection('home');
+        });
+
+        document.querySelector('nav a[href="#semesters"]').addEventListener('click', function () {
+            scrollToSection('semesters');
+        });
+
+        document.querySelector('nav a[href="#drive-links"]').addEventListener('click', function () {
+            scrollToSection('drive-links');
+        });
+
+        document.querySelector('nav a[href="#contact"]').addEventListener('click', function () {
+            scrollToSection('contact');
+        });
+    </script>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        /* Reset some default styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto Mono', monospace;
+            background-color: #ffdbac;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #6e3667;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #6e3667;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #f2f2f2;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #6e3667;
+            margin: 30px 0;
+        }
+
+        div.semester {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        div.course {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex: 1 1 300px;
+            max-width: 400px;
+        }
+
+        p.center {
+            text-align: center;
+            color: #6e3667;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #6e3667;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #a04da0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #6e3667;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-weight: 500;
+        }
+        .quote-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: none;
+            text-align: justify;
+            font-style: italic;
+        }
+        header {
+            display: flex;
+            align-items: center; /* This will vertically center the items */
+            justify-content: start; /* This will align the items to the start */
+        }
+
+        .logo {
+            width: 200px; /* Set the width as per your design */
+            height: auto; /* Maintain the aspect ratio */
+            margin-right: 10px; /* Adjust the margin as needed */
+        }
+
+        h1 {
+            margin: 0; /* Remove the default margin */
+            display: flex;
+            align-items: center; /* Align the text with the center of the image */
+        }
+        .justify-text {
+            text-align: justify;
+            }
+            footer {
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .center {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .center li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <h1><img src="logo.png" alt="IIT Delhi Logo" class="logo">B.Tech in Production and Industrial Engineering 🎓 </h1>
+        
+    </header>
+
+    <main>
+
+        <p class="justify-text">👋 Hii there, I am one of the students at IIT Delhi pursuing B.Tech in Production and Industrial Engineering. I coded this website so that we all can have access to 
+            previous year course materials, and slides. It is my small attempt to make life little easier for everybody. If you have some corrections, feel free to <a href="mailto:0xpeft@gmail.com">send a mail</a>.
+        </p>
+        <p class="justify-text">For the semesterwise contents, I will be skipping the initial two semesters because they are common for the whole batch. 
+            I would be focusing more on the rest of the 8 semesters: the courses, and their prerequisites. I have also added drive 
+            links to some of the students who were nice enough to contribute on the same. It is generally advisable to collect all the academic 
+            materials so that your juniors can also take help from the same. You can also take reference from the <a href="https://home.iitd.ac.in/uploads/course-of-study/Courses%20of%20Study%202023-24.pdf"><b>course of study</b></a> 
+            module available at our institute website.</p>
+
+
+        <hr>
+        <!-- Semester III -->
+        <div class="semester">
+            <div class="course">
+                <p class="center">Semester III</p>
+                <p><strong>MLL100: Introduction to Materials Science and Engineering</strong><br>
+                    Slot: E<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+
+                <p><strong>APL104: Solid Mechanics</strong><br>
+                    Pre-requisite(s): APL100<br>
+                    Slot: D<br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+
+                <p><strong>MCL141: Thermal Science for Manufacturing</strong><br>
+                    Slot: F<br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+
+                <p><strong>MCL111: Kinematics and Dynamics of Machines</strong><br>
+                    Pre-requisite(s): MCP101<br>
+                    Slot: B<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+
+                <p><strong>HUL2XX</strong><br>
+                    Slot: A, M<br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+            </div>
+
+            <!-- Semester IV -->
+            <div class="course">
+                <p class="center">Semester IV</p>
+                <p><strong>SBL100: Introductory Biology for Engineers</strong><br>
+                    Slot: C<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+
+                <p><strong>MCL132: Metal Forming and Press Tools</strong><br>
+                    Pre-requisite(s): MCP101<br>
+                    Slot: H<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+
+                <p><strong>MCL133: Near Net Shape Manufacturing</strong><br>
+                    Pre-requisite(s): MCP101<br>
+                    Slot: F<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+
+                <p><strong>MTL108: Introduction to Statistics</strong><br>
+                    Slot: D<br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+
+                <p><strong>MCL201: Mechanical Engineering Drawing</strong><br>
+                    Pre-requisite(s): MCP100<br>
+                    Slot: E<br>
+                    <em>3.5 credits (2 0 3)</em>
+                </p>
+
+                <p><strong>HUL2XX</strong><br>
+                    Slot: A, M<br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+            </div>
+
+            <!-- Semester V -->
+            <div class="course">
+                <p class="center">Semester V</p>
+                <p><strong>MCL261: Introduction to Operations Research</strong><br>
+                    Pre-requisite(s): MTL108<br>
+                    Slot: E<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+
+                <p><strong>MCL134: Metrology and Quality Assurance</strong><br>
+                    Pre-requisite(s): MCP101<br>
+                    Slot: B<br>
+                    <em>3.5 credits (3 0 1)</em>
+                </p>
+
+                <p><strong>MCL135: Welding and Allied Processes</strong><br>
+                    Pre-requisite(s): MCP101<br>
+                    Slot: F<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+
+                <p><strong>MTL107: Numerical Methods and Computations</strong><br>
+                    Slot: H<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+
+                <p><strong>MCL211: Design of Machines</strong><br>
+                    Pre-requisite(s): APL104, MCL100, MCL201<br>
+                    Slot: C<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+
+                <p><strong>MCP232: Production Engineering Laboratory -I</strong><br>
+                    Pre-requisite(s): MCL135, MCL136, MCP232<br>
+                    Slot: P<br>
+                    <em>1 credits (0 0 2)</em>
+                </p>
+
+                <p><strong>MCL262: Stochastic Modeling and Simulation</strong><br>
+                    Pre-requisite(s): MTL108<br>
+                    Slot: A<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+            </div>
+            <div class = "course">
+                <p class="center">Semester VI</p>
+                <p>
+                    <strong>MCL361: Manufacturing System Design </strong><br>
+                    Pre-requisite(s): MTL108, MCL261 <br>
+                    Slot: D <br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>MCL212: Control Theory and Applications </strong><br>
+                    Pre-requisite(s): MTL100, MTL101 <br>
+                    Slot: B<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>MCL311: CAD and Finite Element Analysis</strong> <br>
+                    Pre-requisite(s): for ME1: MCL131, MCL231 for ME2: MCL136 <br>
+                    Slot: E<br>
+                    <em>4 credits (3 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>MCP261: Industrial Engineering Laboratory-I<</strong>br>
+                    Pre-requisite(s): MCL261, MCL262 <br>
+                    Slot: P<br>
+                    <em>1 credit (0 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>MCP332: Production Engineering Laboratory-II</strong> <br>
+                    Pre-requisite(s): MCL135, MCL136, MCP232 <br>
+                    Slot: P<br>
+                    <em>1 credit (0 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>MCL136: Material Removal Processes</strong> <br>
+                    Pre-requisite(s): MCP101 <br>
+                    Slot: H<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>MCL331: Micro and Nano Manufacturing </strong><br>
+                    Pre-requisite(s): for ME1: MCL131, MCL231 for ME2: MCL136<br>
+                    Slot: A<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>CVL100: Environmental Science</strong> <br>
+                    Slot: C<br>
+                    <em>2 credits (2 0 0)</em>
+                </p>
+            </div>
+            <div class="course">
+                <p class="center">Semester VII</p>
+                <p>
+                    <strong>MCL431: CAM and Automation</strong><br>
+                    Pre-requisite(s): for ME1: MCL131, MCL231 <br>
+                    for ME2: MCL136 <br>
+                    Slot: D<br>
+                    <em>3 credits (2 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>MCD411: B.Tech Project</strong> <br>
+                    Slot: P<br>
+                    <em>4 credits (0 0 8)</em>
+                </p>
+                
+                <p>
+                    <strong>MCP361: Industrial Engineering Laboratory-II </strong><br>
+                    Pre-requisite(s): MCP261, MCL361 <br>
+                    Slot: C<br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>OC 1 </strong><br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>HUL2XX </strong><br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+                
+                <p>
+                    <strong>DE 1</strong> <br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+            </div>
+            <div class="course">
+                <p class="center">Semester VIII</p>
+                <p>
+                    <strong>DE 2</strong><br>
+                    <em>3 credits (2 0 2)</em>
+                </p>
+                
+                <p>
+                    <strong>OC 2</strong> <br>
+                    <em>3 credits (0 0 8)</em>
+                </p>
+                
+                <p>
+                    <strong>OC 3</strong> <br>
+                    <em>4 credits (3 1 0)</em>
+                </p>
+                
+                <p>
+                    <strong>DE 3</strong> <br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>HUL3XX</strong><br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+                
+                <p>
+                    <strong>DE 4</strong> <br>
+                    <em>3 credits (3 0 0)</em>
+                </p>
+            </div>
+        </div>
+
+        <!-- Add similar blocks for Semesters VI, VII, VIII -->
+
+        <hr>
+
+        <!-- Drive Links -->
+        <p class="center" ><u><b>Some drive links</b></u></p>
+        <ul class="center">
+            <li>📚 <a href="https://drive.google.com/drive/folders/1mpxYcEJDwDwOGigO-gManN0I_XhwI-q1"><strong>Rajan Sir's Drive</strong></a></li>
+            <li>📖 <a href="https://docs.google.com/document/d/1xav7nN_l_MFYhghSSrWqDRlw65G88RRzOgbQOIBpLaU/edit?usp=sharing"><strong>Sylvia Mam's Drive</strong></a></li>
+            <li>📝 <a href="https://csciitd-my.sharepoint.com/:f:/g/personal/me2211069_iitd_ac_in/EqmVPBzbz4ZPq53_V-d0QjEB_mc5vqx2KkfUScFVKYD6IA"><strong>Mahika's drive</strong></a></li>
+            <li>📁 <a href="https://drive.google.com/drive/folders/1FJeKMKgKj9HlmL30_FTBHUkZN4eczPZa"><strong>Deepanshu's drive</strong></a></li>
+            <li>📂 <a href="https://drive.google.com/drive/folders/12C93xWpej6SyU1hAIJHWMXqpXS1SYsGw?usp=sharing"><strong>Shivi's drive</strong></a></li>
+            <li>📘 <a href="https://drive.google.com/drive/folders/1jk7-I_Uei9heCGwfqgM7-0MH9ERFMFO_"><strong>SEM 6 - I</strong></a></li>
+            <li>📙 <a href="https://drive.google.com/drive/folders/1Fs6Qz6KjmVgxwCwApTTzUexE8BSUYoYP"><strong>SEM 6 - II</strong></a></li>
+        </ul>
+        
+
+        <hr>
+
+        <!-- Thank You Section -->
+        <div class="quote-container" id="quoteContainer"></div>
+
+        <script>
+            // Array of random quotes
+            const quotes = [
+                    "Here's to the crazy ones. The misfits. The rebels. The troublemakers. The round pegs in the square holes. The ones who see things differently. They're not fond of rules. And they have no respect for the status quo. You can quote them, disagree with them, glorify or vilify them. About the only thing you can't do is ignore them. Because they change things. They push the human race forward. And while some may see them as the crazy ones, we see genius. Because the people who are crazy enough to think they can change the world, are the ones who do. ― Steve Jobs",
+                    
+                    "I believe that everything happens for a reason. People change so that you can learn to let go, things go wrong so that you appreciate them when they're right, you believe lies so you eventually learn to trust no one but yourself, and sometimes good things fall apart so better things can fall together. ― Marilyn Monroe",
+                    
+                    "Saying 'I notice you're a nerd' is like saying, 'Hey, I notice that you'd rather be intelligent than be stupid, that you'd rather be thoughtful than be vapid, that you believe that there are things that matter more than the arrest record of Lindsay Lohan. Why is that?' In fact, it seems to me that most contemporary insults are pretty lame. Even 'lame' is kind of lame. Saying 'You're lame' is like saying 'You walk with a limp.' Yeah, whatever, so does 50 Cent, and he's done all right for himself. ― John Green",
+                    
+                    "We are all a little weird. And life is a little weird. And when we find someone whose weirdness is compatible with ours, we join up with them and fall into mutually satisfying weirdness—and call it love—true love. ― Robert Fulghum, True Love",
+
+                    "There are infinite numbers between 0 and 1. There is .1 and .12 and .112 and an infinite collection of others. Of course, there is a bigger infinite set of numbers between 0 and 2, or between 0 and a million. Some infinities are bigger than other infinities. A writer we used to like taught us that. There are days, many of them, when I resent the size of my unbounded set. I want more numbers than I am likely to get, and God, I want more numbers for Augustus Waters than he got. But, Gus, my love, I cannot tell you how thankful I am for our little infinity. I would not trade it for the world. You gave me a forever within the numbered days, and I am grateful.  ― John Green, The Fault in Our Stars",
+
+                    "Man cannot survive except through his mind. He comes on earth unarmed. His brain is his only weapon. Animals obtain food by force. man had no claws, no fangs, no horns, no great strength of muscle. He must plant his food or hunt it. To plant, he needs a process of thought. To hunt, he needs weapons,and to make weapons - a process of thought. From this simplest necessity to the highest religious abstraction, from the wheel to the skyscraper, everything we are and we have comes from a single attribute of man -the function of his reasoning mind. ― Ayn Rand, The Fountainhead"
+                
+                ];
+
+        
+            // Function to generate a random quote
+            function generateRandomQuote() {
+                const minWords = 70;
+                const maxWords = 500;
+        
+                // Select a random quote from the array
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        
+                // Split the quote into an array of words
+                const wordsArray = randomQuote.split(' ');
+        
+                // Ensure the quote has a minimum number of words
+                // Slice the array to ensure the quote has a maximum number of words
+                const trimmedQuoteArray = wordsArray.slice(0, maxWords);
+        
+                // Join the array back into a string
+                const trimmedQuote = trimmedQuoteArray.join(' ');
+        
+                // Display the random quote in the HTML div
+                document.getElementById('quoteContainer').innerHTML = `<p>${trimmedQuote}</p>`;
+            }
+        
+            // Call the function to generate a random quote when the page loads
+            window.onload = generateRandomQuote;
+        </script>
+    </main>
+
+    <footer>
+        <p>&copy; With Love, 0xpeft ❤️</p>
+    </footer>
+</body>
+
+</html>
